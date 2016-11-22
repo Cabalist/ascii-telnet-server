@@ -10,11 +10,17 @@ python:
   - "pypy3"
 # command to install dependencies
 before_install:
-  - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
+  - echo $PYTHONPATH
 
 install:
  - "pip install -r dev_requirements.txt"
  - "pip install -e ."
+
+after_install:
+ - echo $PYTHONPATH
+ - /usr/bin/env python -c 'import ascii_telnet'
+ - /usr/bin/env python -c 'import ascii_telnet.lib.ascii_movie'
+ - pwd
 
 # command to run tests
 script: pytest
