@@ -20,7 +20,6 @@ script: pytest
 os:
   - linux
 
-"addons": {
-  "apt_packages": [
-    "pandoc"
-  ]
+addons:
+  apt_packages:
+    - pandoc
