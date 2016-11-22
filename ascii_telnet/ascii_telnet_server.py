@@ -29,7 +29,7 @@
 
 """
   ASCII art movie Telnet player.
-  Version         : 0.1
+  Version         : 1.0
 
   Can stream an ~20 minutes ASCII movie via Telnet emulation
   as stand alone server or via xinetd daemon.
@@ -47,9 +47,10 @@ import os
 import sys
 from optparse import OptionParser
 
-from ascii_telnet.ascii_movie import Movie
-from ascii_telnet.ascii_player import VT100Player
-from ascii_telnet.ascii_server import TelnetRequestHandler, ThreadedTCPServer
+from ascii_telnet.lib import VT100Player
+from ascii_telnet.lib import TelnetRequestHandler, ThreadedTCPServer
+
+from ascii_telnet.lib import Movie
 
 
 def runTcpServer(interface, port, filename):
