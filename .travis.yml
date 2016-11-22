@@ -6,6 +6,14 @@ python:
   - "3.5"
   - "3.6"
   - "nightly"
+
+  - "pypy"
+  - "pypy3"
+# command to install dependencies
+install:
+ - "pip install -r dev_requirements.txt"
+ - "pip install -e ."
+
 # command to run tests
 script: pytest
 
