@@ -4,17 +4,21 @@ python:
   - "2.7"
   - "3.4"
   - "3.5"
-  - "3.6dev"
+  - "3.6-dev"
   - "nightly"
   - "pypy"
   - "pypy3"
 # command to install dependencies
 before_install:
   - echo $PYTHONPATH
+  - pwd
 
 install:
  - "pip install -r dev_requirements.txt"
  - "pip install -e ."
+ - /usr/bin/env python -c 'import ascii_telnet'
+ - /usr/bin/env python -c 'import ascii_telnet.lib.ascii_movie'
+ - pwd
 
 after_install:
  - echo $PYTHONPATH
