@@ -4,8 +4,6 @@ ASCII art movie Telnet player
 Can stream an ~20 minutes ASCII movie via Telnet emulation
 as stand alone server or via xinetd daemon. 
 
-Screenshot:
-
 <img src="screenshots/example.gif?raw=true" width=500>
 
 Wanna see it in action? Just watch http://asciinema.org/a/3132
@@ -15,7 +13,7 @@ Tested with Python 2.6+, Python 3.5+
 
 Original art work : Simon Jansen [http://www.asciimation.co.nz/](http://www.asciimation.co.nz/)  
 Telnetification & Player coding : Martin W. Kirst  
-Python3 Update: Ryan Jarvis
+Python3 Update: Ryan Jarvis  
 
 Command line parameters
 -----------------------

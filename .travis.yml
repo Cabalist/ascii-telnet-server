@@ -4,10 +4,20 @@ python:
   - "2.7"
   - "3.4"
   - "3.5"
+  - "3.6-dev"
+  - "nightly"
+  - "pypy"
+  - "pypy3"
 # command to install dependencies
-install: "pip install -r dev_requirements.txt"
+install:
+ - "pip install -r dev_requirements.txt"
+
 # command to run tests
 script: pytest
 
 os:
   - linux
+
+addons:
+  apt_packages:
+    - pandoc
