@@ -9,12 +9,15 @@ python:
   - "pypy"
   - "pypy3"
 # command to install dependencies
+before_install:
+  - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
+
 install:
  - "pip install -r dev_requirements.txt"
  - "pip install -e ."
 
 # command to run tests
-script: "python -m pytest tests"
+script: pytest
 
 os:
   - linux
