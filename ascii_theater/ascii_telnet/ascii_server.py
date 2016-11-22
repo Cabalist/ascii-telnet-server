@@ -30,6 +30,7 @@ import errno
 import socket
 
 from ascii_telnet.ascii_movie import Movie
+
 from ascii_telnet.ascii_player import VT100Player
 
 try:
