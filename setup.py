@@ -14,7 +14,7 @@ setuptools.setup(
         author="Martin W. Kirst",
         url="https://github.com/nitram509/ascii-telnet-server",
         packages=setuptools.find_packages(),
-        data_files=[('movies', ['sample_movies/rick_roll.txt',
+        data_files=[('ascii-telnet-server/movies', ['sample_movies/rick_roll.txt',
                                 'sample_movies/sw1.txt',
                                 'sample_movies/short_intro.txt', ])],
         extra_requires={'test': ['pytest']},

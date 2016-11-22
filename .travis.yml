@@ -15,7 +15,7 @@ before_install:
 
 install:
  - "pip install -r dev_requirements.txt"
- - "pip install -e ."
+ - "pip install ."
  - /usr/bin/env python -c 'import ascii_telnet'
  - /usr/bin/env python -c 'import ascii_telnet.lib.ascii_movie'
  - pwd
